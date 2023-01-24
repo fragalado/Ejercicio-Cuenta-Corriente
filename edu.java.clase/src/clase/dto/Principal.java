@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Clase de acceso a la aplicación CuentaCorriente
+ * @author csi22
+ */
 public class Principal {
 
 	public static void main(String[] args) {
@@ -32,11 +36,14 @@ public class Principal {
 		for (CuentaCorriente var : listaCuentas) {
 			// Vamos a hacer un bucle que mostrará las opciones que hay, se saldrá con el "0"
 			do {
-				System.out.println("\t1.Mostrar información");
-				System.out.println("\t2.Ingresar dinero");
-				System.out.println("\t3.Sacar dinero");
-				System.out.println("\t0.Salir");
-				System.out.print("Introduzca una opción: ");
+				System.out.println("\t _____________________________");
+				System.out.println("\t|                             |");
+				System.out.println("\t|    1.Mostrar información    |");
+				System.out.println("\t|    2.Ingresar dinero        |");
+				System.out.println("\t|    3.Sacar dinero           |");
+				System.out.println("\t|    0.Salir                  |");
+				System.out.println("\t|_____________________________|");
+				System.out.print("\nIntroduzca una opción: ");
 				captura = sc.nextInt();
 				// Vamos a controlar los errores
 				while(captura < 0 || captura > 3) {

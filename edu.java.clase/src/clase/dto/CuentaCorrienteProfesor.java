@@ -1,6 +1,7 @@
 package clase.dto;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Modelo de las cuentas corrientes a gestionar
@@ -13,6 +14,18 @@ public class CuentaCorrienteProfesor {
 	private String dni;
 	private String nombreTitular;
 	private double saldo;
+	
+	// Constructores
+	
+	public CuentaCorrienteProfesor(String dni, String nombreTitular) {
+		super();
+		this.dni=dni;
+		this.nombreTitular=nombreTitular;
+	}
+	
+	public CuentaCorrienteProfesor() {
+		super();
+	}
 	
 	// Getter y Setters
 	
@@ -35,10 +48,33 @@ public class CuentaCorrienteProfesor {
 		this.saldo = saldo;
 	}	
 	
-	// Métodos
+	// Sobreescritura toString
 	
-	public void crearCuenta() {
+	@Override
+	public String toString() {
+		return "CuentaCorrienteProfesor [dni=" + dni + ", nombreTitular=" + nombreTitular + ", saldo=" + saldo + "]";
+	}
+	
+	// Métodos
+
+	public CuentaCorrienteProfesor crearCuenta() {
+		// Variables necesarias
+		String opcionEntradaDni;
+		String opcionEntradaNombreTitular;
 		
+		// Creamos un Scanner
+		Scanner entradaOpcion = new Scanner(System.in);
+		
+		// Pedimos los datos
+		System.out.println("Introduzca el nombre completo del titular: ");
+		opcionEntradaNombreTitular = entradaOpcion.next();
+		
+		System.out.println("Introduzca el DNI del titular: ");
+		opcionEntradaDni = entradaOpcion.next();
+		
+		
+		entradaOpcion.close();
+		return null;
 	}
 	
 	public void ingresarDinero() {

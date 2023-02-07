@@ -15,19 +15,20 @@ public class PrincipalProfesor {
 		
 		// Imprimir el menú por consola
 		// Scanner con la opción del usuario
-		Scanner entradaOpcion = new Scanner(System.in);
+		Scanner entradaOpcion2 = new Scanner(System.in);
 		Boolean cerrarMenu = false;
 		int opcion;
 		while (!cerrarMenu) {
 			// Mostramos el menu
 			mostrarMenu();
 			System.out.println("Introduzca la opción deseada: ");
-			opcion = entradaOpcion.nextInt();
+			opcion = entradaOpcion2.nextInt();
 			System.out.println("[INFO] - Has seleccionado la opcion " + opcion);
 			
 			switch (opcion) {
 			case 1:
 				listaCCCP.add(cccp.crearCuenta());
+				System.out.println("Cuenta creada: " + listaCCCP.get(0));
 				break;
 			case 2:
 				break;
@@ -47,7 +48,7 @@ public class PrincipalProfesor {
 		
 		
 		
-		entradaOpcion.close();
+		entradaOpcion2.close();
 	}
 	
 	private static void mostrarMenu() {
